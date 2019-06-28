@@ -1,10 +1,12 @@
 @extends('template')
+@extends('/layouts/app')
+
 
 @section('header')
     @if(Auth::check())
         <div class="btn-group pull-right">
             {!! link_to_route('post.create', 'Créer un article', [], ['class' => 'btn btn-info']) !!}
-            {!! link_to('logout', 'Deconnexion', ['class' => 'btn btn-warning']) !!}
+{{--            {!! link_to('logout', 'Deconnexion', ['class' => 'btn btn-warning']) !!}--}}
         </div>
     @else
         {!! link_to('login', 'Se connecter', ['class' => 'btn btn-info pull-right']) !!}
