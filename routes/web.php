@@ -19,3 +19,5 @@ Route::resource('user', 'UserController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::resource('post', 'PostController', ['except' => ['show', 'edit', 'update']]);
+
