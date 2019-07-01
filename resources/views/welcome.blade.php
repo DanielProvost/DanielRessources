@@ -46,16 +46,20 @@
 
             .title {
                 font-size: 84px;
+                color: #77578b;
             }
 
             .links > a {
-                color: #636b6f;
+                color: #426e6f;
                 padding: 0 25px;
-                font-size: 13px;
+                font-size: 11px;
                 font-weight: 600;
                 letter-spacing: .1rem;
                 text-decoration: none;
                 text-transform: uppercase;
+            }
+            #PPost{
+                font-size:20px;
             }
 
             .m-b-md {
@@ -89,7 +93,7 @@
                     @if(Auth::check() and Auth::user()->admin)
                     <a href="{{ route('user.index') }}">User</a>
                     @endif
-                    <a href="{{ route('post.index') }}">Post</a>
+                    <a id="PPost" href="{{ route('post.index') }}">Posts</a>
 {{--                    <a href="https://laracasts.com">Laracasts</a>--}}
 {{--                    <a href="https://laravel-news.com">News</a>--}}
 {{--                    <a href="https://blog.laravel.com">Blog</a>--}}
